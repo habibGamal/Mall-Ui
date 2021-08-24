@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/all.min.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="escape-effect-form"></div>
+    <!--
+        Popup form
+    -->
+    <form id="user-form" class="pop-up-form">
+        <h3 class="text-dark text-center">Login</h3>
+        <div class="select">
+            <div class="option active">
+                <span>Customer</span>
+            </div>
+            <div class="option">
+                <span>Business</span>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="login-or-register">
+            <button type="submit" class="btn btn-black">Login</button>
+            <span>Don't have an account ?<br><a href="">Sign up</a></span>
+        </div>
+        <div class="login-with">
+            <a href="">
+                <svg class="svg-inline--fa fa-google" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+                    <path fill="#4285F4" d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z"/>
+                    <path fill="#34A853" d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z"/>
+                    <path fill="#FBBC05" d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z"/>
+                    <path fill="#EA4335" d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z"/>
+                    </g>
+                </svg>
+            </a>
+            <a href="">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </form>
+    <header>
+        <nav class="d-flex justify-content-between">
+            <div id="escape-effect-nav"></div>
+            <div class="d-flex align-items-center">
+                <div class="bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="logo">
+                    <h2>Mall</h2>
+                </div>
+                <div id="nav-bar">
+                    <ul>
+                        <li>
+                            <a class="active" href=""><i class="fas fa-code-branch"></i> Branches</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas fa-cubes"></i> Products</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas fa-shopping-basket"></i> Categories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="search">
+                <input type="text" name="search" placeholder="Search" />
+                <i class="fas fa-search"></i>
+            </form>
+            <div class="d-flex align-items-center user-cart">
+                <div class="circle cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="circle user" id="user" data-pop-up-form="#user-form">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="slider">
+            <div class="photo">
+                <img src="./images/photo_1.jpg" />
+            </div>
+        </div>
+    </header>
+    <section class="stores">
+        <div class="container">
+            <div class="row">
+                <a href="" class="col-lg-3 store">
+                    <div class="logo">
+                        <img src="./images/logo_1.jpg"/>
+                    </div>
+                    <div class="name">
+                        <h3>Patrol</h3>
+                    </div>
+                </a>
+                <div class="col-lg-3 store">
+                    <div class="logo">
+                        <img src="./images/logo_2.jpg"/>
+                    </div>
+                    <div class="name">
+                        <h3>Town</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 store">
+                    <div class="logo">
+                        <img src="./images/logo_3.jpg"/>
+                    </div>
+                    <div class="name">
+                        <h3>Brave</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 store">
+                    <div class="logo">
+                        <img src="./images/logo_1.jpg"/>
+                    </div>
+                    <div class="name">
+                        <h3>Firewood</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="container">
+            <div class="grid">
+                <a href="" class="category">
+                    <div class="photo">
+                        <img src="./images/cat_6.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Casual</h4>
+                    </div>
+                </a>
+                <a href=""  class="category">
+                    <div class="photo">
+                        <img src="./images/cat_1.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Men</h4>
+                    </div>
+                </a>
+                <a href=""  class="category">
+                    <div class="photo">
+                        <img src="./images/cat_2.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Formal</h4>
+                    </div>
+                </a>
+                <a href=""  class="category">
+                    <div class="photo">
+                        <img src="./images/cat_4.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Home</h4>
+                    </div>
+                </a>
+                <a href=""  class="category">
+                    <div class="photo">
+                        <img src="./images/cat_5.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Fashion</h4>
+                    </div>
+                </a>
+                <a href=""  class="category">
+                    <div class="photo">
+                        <img src="./images/cat_3.jpg" />
+                    </div>
+                    <div class="lable">
+                        <h4>Classic</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="container">
+            <h2>Top Sales</h2>
+            <div id="row-1" class="row-show-container">
+                <div class="left-arrow">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </div>
+                <div class="right-arrow active">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+                <div class="row-show mt-3">
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/cat_5.jpg" alt="T-shirt">
+                        <div class="product-details p-3 text-center">
+                            <h5>Blouse</h5>
+                            <span class="separator"></span>
+                            <h5 class="price pt-3"><del class="mr-4">250 LE</del> 200 LE</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
