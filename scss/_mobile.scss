@@ -1,0 +1,104 @@
+// Extra small
+@media screen and(max-width:576px) {
+    /*
+        Name : Navbar
+
+    */
+    nav {
+
+        padding: .5rem 1rem;
+        .search {
+            position: absolute;
+            top: 56px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            &.active {
+                display: block;
+            }
+            > input {
+                &:focus{
+                    width: 16rem;
+                }
+            }
+        }
+        .logo {
+            color: #fff;
+            margin: 0 1.5rem;
+            > h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .user-cart {
+            > .circle {
+                width: 35px;
+                height: 35px;
+                &.search-icon{
+                    display: block;
+                    &.active {
+                    display: none;
+                }}
+                > .svg-inline--fa {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .categories {
+        .grid {
+            display: block;
+            .category {
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+// Large
+@media screen and (min-width:576px) and (max-width:992px) {
+    /*
+        Name : Categories
+
+    */
+    .categories {
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 250px 250px 250px 250px;
+            .category {
+                display: block;
+                margin: 1rem 0;
+                &:nth-child(2){
+                    grid-area: 1/2 / 3/ 3;
+                }
+                &:nth-child(6){
+                    grid-area: 3/1 / 5/ 2;
+                }
+            }
+        }
+    }
+}
+// Speicial 
+// @media screen and (max-width:667px) {
+//     /*
+//         Name : Categories
+
+//     */
+//     .categories {
+//         .grid {
+//             display: grid;
+//             grid-template-columns: auto auto;
+//             grid-template-rows: 250px 250px 250px 250px;
+//             .category {
+//                 display: block;
+//                 margin: 1rem 0;
+//                 &:nth-child(2){
+//                     grid-area: 1/2 / 3/ 3;
+//                 }
+//                 &:nth-child(6){
+//                     grid-area: 3/1 / 5/ 2;
+//                 }
+//             }
+//         }
+//     }
+// }

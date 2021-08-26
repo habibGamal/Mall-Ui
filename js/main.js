@@ -1,6 +1,6 @@
 class RowSlide {
     constructor(container){
-        this.width = 1088;
+        this.width = container.width();
         this.container = container;
         this.rightArrow = this.container.children('.right-arrow');
         this.leftArrow = this.container.children('.left-arrow');
@@ -10,16 +10,17 @@ class RowSlide {
     performAction(){
         this.row.scroll(()=>{
             let availableLeft = this.row.get(0).scrollWidth - (this.row.get(0).scrollLeft + this.width);
+            console.log(availableLeft,this.row.get(0).scrollWidth,this.width);
             if(availableLeft == 0){
                 this.rightArrow.removeClass('active');
             };
             if(availableLeft > 0){
                 this.rightArrow.addClass('active');
             };
-            if(availableLeft == this.width){
+            if(availableLeft == this.row.get(0).scrollWidth - this.width){
                 this.leftArrow.removeClass('active');
             };
-            if(availableLeft < this.width){
+            if(availableLeft < this.row.get(0).scrollWidth - this.width){
                 this.leftArrow.addClass('active');
             };
         });
@@ -32,26 +33,14 @@ class RowSlide {
     }
 }
 $(document).ready(()=>{
-    /*
+/*
     Name : Nav-Bar kit
-    */
-   let nav = $('nav');
-   let navBar = $('#nav-bar');
-   let bars = $('.bars');
-   let logo = $('.logo');
-   let escapeNav = $('#escape-effect-nav');
-//    $(window).scroll(()=>{
-//        if($(this).scrollTop() > 0){
-//            if(!nav.hasClass('active')){
-//                nav.addClass('active')
-//            }
-//        }
-//        if($(this).scrollTop() === 0){
-//            if(nav.hasClass('active')){
-//                nav.removeClass('active')
-//            }
-//        }
-//    })
+*/
+    let navBar = $('#nav-bar');
+    let bars = $('.bars');
+    let logo = $('.logo');
+    let escapeNav = $('#escape-effect-nav');
+   
     function toggleNav(){
         navBar.toggleClass('active');
         bars.toggleClass('nav-bar');
@@ -70,15 +59,19 @@ $(document).ready(()=>{
         removeNav();
         escapeNav.removeClass('active');
     })
+    // search toggle in small screens
+    $('.circle.search-icon').click(()=>{
+        $('#search').addClass('active');
+        $('#search-input').focus();
+        $('.circle.search-icon').addClass('active');
+    })
+    $('#search-input').blur(()=>{
+        $('#search').removeClass('active');
+        $('.circle.search-icon').removeClass('active');
+    });
     /*
     Name : Product kit
     */
-   // $('.product').each((i,e)=>{
-       //     $(e).css({"animation-delay":.1 + (i*.05) + 's'});
-       // });
-       /*
-       Name : User-Form kit
-       */
     let escapeEffect = $('#escape-effect-form');
     let userBtn      = $('#user');
     userBtn.click(()=>{

@@ -34,6 +34,8 @@
 
 .pop-up-form {
   position: fixed;
+  width: 380px;
+  max-width: 95%;
   background-color: #fff;
   box-shadow: 0px 1px 3px #a2a2a2;
   border-radius: 20px;
@@ -88,7 +90,7 @@
 }
 
 /*
-    Name : Bar kit
+    Name : Navbar
 */
 nav {
   position: fixed;
@@ -224,6 +226,9 @@ nav .user-cart > .circle {
   border-radius: 100%;
   position: relative;
   cursor: pointer;
+}
+nav .user-cart > .circle.search-icon {
+  display: none;
 }
 nav .user-cart > .circle > .svg-inline--fa {
   position: absolute;
@@ -424,7 +429,7 @@ nav .user-cart > .circle > .svg-inline--fa {
 
 .row-show {
   display: flex;
-  width: 1088px;
+  width: 100%;
   padding-bottom: 1rem;
   overflow-x: auto;
 }
@@ -477,6 +482,81 @@ nav .user-cart > .circle > .svg-inline--fa {
 
 .row-show-container .right-arrow.active, .row-show-container .left-arrow.active {
   display: block;
+}
+
+/*
+    Imported files
+*/
+@media screen and (max-width: 576px) {
+  /*
+      Name : Navbar
+
+  */
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  nav .search {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+  nav .search.active {
+    display: block;
+  }
+  nav .search > input:focus {
+    width: 16rem;
+  }
+  nav .logo {
+    color: #fff;
+    margin: 0 1.5rem;
+  }
+  nav .logo > h2 {
+    font-size: 1.5rem;
+  }
+  nav .user-cart > .circle {
+    width: 35px;
+    height: 35px;
+  }
+  nav .user-cart > .circle.search-icon {
+    display: block;
+  }
+  nav .user-cart > .circle.search-icon.active {
+    display: none;
+  }
+  nav .user-cart > .circle > .svg-inline--fa {
+    font-size: 1rem;
+  }
+
+  .categories .grid {
+    display: block;
+  }
+  .categories .grid .category {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /*
+      Name : Categories
+
+  */
+  .categories .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 250px 250px 250px 250px;
+  }
+  .categories .grid .category {
+    display: block;
+    margin: 1rem 0;
+  }
+  .categories .grid .category:nth-child(2) {
+    grid-area: 1/2/3/3;
+  }
+  .categories .grid .category:nth-child(6) {
+    grid-area: 3/1/5/2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
